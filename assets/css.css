@@ -1,0 +1,72 @@
+body {
+	margin: 0;
+	font-size: 15px;
+	line-height: 1.6;
+	height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.tools {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.current-value {
+    font-size: 1.35em;
+    font-weight: bold;
+    margin-left: .5em;
+    border: 1px solid black;
+    padding: 1px 6px;
+    border-radius: 5px;
+}
+
+.field-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.field-agent {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    position: relative;
+}
+
+.tools-slider h3 {
+    margin: 0;
+}
+
+.field-agent.red {
+    background-color: rgb(255, 152, 152);
+}
+
+.field-agent.blue {
+    background-color: rgb(152, 152, 255);
+}
+
+.field-agent.unhappy::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #333;
+    border-radius: 50%;
+    top: calc(50% - 3px);
+    left: calc(50% - 3px);
+}
+
+.field-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 2em;
+}
